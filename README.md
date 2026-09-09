@@ -1,3 +1,9 @@
+> [!IMPORTANT]
+> ### 📦 このリポジトリは統合・移行されました
+> 本リポジトリの機能プロンプトおよびソースコードは、統合スイート **[v0-prototypes-gallery](https://github.com/ymtezo/v0-prototypes-gallery/tree/main/apps/feedback-tool)** へ集約されました。  
+> 今後の閲覧・保守・開発は **[v0-prototypes-gallery](https://github.com/ymtezo/v0-prototypes-gallery/tree/main/apps/feedback-tool)** をご参照ください。
+
+---
 # Feedback tool implementation
 
 *Automatically synced with your [v0.app](https://v0.app) deployments*
