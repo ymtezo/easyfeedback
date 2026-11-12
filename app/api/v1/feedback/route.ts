@@ -1,6 +1,10 @@
 import type { NextRequest } from "next/server"
 import { createClient } from "@/lib/supabase/server"
-import { authenticateApiRequest, apiError, apiSuccess } from "@/lib/api/auth"
+import { authenticateApiRequest, apiError, apiSuccess, apiOptions } from "@/lib/api/auth"
+
+export async function OPTIONS() {
+  return apiOptions()
+}
 
 // POST /api/v1/feedback - Submit feedback
 export async function POST(request: NextRequest) {

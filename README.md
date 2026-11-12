@@ -42,9 +42,27 @@ Built with Next.js (App Router) + Supabase. Originally prototyped on [v0.app](ht
      -d '{"type":"nps","score":9,"comment":"Great!","respondent_id":"user_123"}'
    ```
 
+## Embed in your app (widget)
+
+Drop a feedback form into any web page — no framework required:
+
+```html
+<script src="https://<your-host>/widget/easyfeedback.js"></script>
+<easyfeedback-widget
+  api-url="https://<your-host>"
+  api-key="ef_your_api_key"
+  type="nps"
+  respondent-id="user_123">
+</easyfeedback-widget>
+```
+
+Attributes: `type` = `nps` (0–10) / `csat` (1–5) / `ces` (1–7) / `custom` (comment only), plus `title`, `lang` (`en`/`ja`), `anonymous`, `respondent-id`. The API exposes CORS for browser embedding. Tip: use a dedicated low-scope key for public pages since the key is visible client-side.
+
 ## Deploy
 
 One-click-friendly on Vercel (this repo is already wired to a live deployment). Any Next.js-capable host works — the app needs only the two env vars above plus a reachable Supabase project.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fymtezo%2Feasyfeedback&env=NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY)
 
 ## API reference
 

@@ -51,10 +51,20 @@ export async function authenticateApiRequest(request: NextRequest): Promise<ApiA
   return { success: true, projectId: apiKeyData.project_id }
 }
 
+const CORS_HEADERS = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+  "Access-Control-Allow-Headers": "Authorization, Content-Type",
+}
+
 export function apiError(message: string, status = 400) {
-  return Response.json({ error: message, success: false }, { status })
+  return Response.json({ error: message, success: false }, { status, headers: CORS_HEADERS })
 }
 
 export function apiSuccess(data: Record<string, unknown>, status = 200) {
-  return Response.json({ ...data, success: true }, { status })
+  return Response.json({ ...data, success: true }, { status, headers: CORS_HEADERS })
+}
+
+export function apiOptions() {
+  return new Response(null, { status: 204, headers: CORS_HEADERS })
 }
