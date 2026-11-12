@@ -1,5 +1,5 @@
 {
-  "name": "my-v0-project",
+  "name": "easyfeedback",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -71,5 +71,11 @@
     "tailwindcss": "^4.1.9",
     "tw-animate-css": "1.3.3",
     "typescript": "^5"
+  },
+  "description": "EasyFeedback — embeddable feedback-collection API & dashboard (NPS/CSAT/CES, respondent rewards, REST API). Next.js + Supabase.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ymtezo/v0-feedback-tool-implementation.git"
   }
 }
